@@ -1,0 +1,13 @@
+<div id="badnews" style="padding: 13px;">
+    <div *ngFor="let product of products; last as isLast" style="margin-top:12px; ">
+
+        <div class="post" attr.data-userid="{{product.userId}}" attr.data-postid="{{product.id}}">
+            <div class="post__img"></div>
+            <div class="post__text">
+                <div class="post__title">{{product.title}}</div>
+                <div class="post__body">{{product.body}}</div>
+            </div>
+        </div>
+        <div class="divider" *ngIf="!isLast"></div>
+    </div>
+</div>
